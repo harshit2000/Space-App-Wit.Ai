@@ -33,6 +33,7 @@ function setResponse(data) {
     document.getElementById("response").innerHTML =
     "<pre>" + data.text + "</pre>"
     "<pre>" + data.traits + "</pre>";
+    "<pre>" + data.body + "</pre>";
   }
   
   //document.getElementById("response").innerHTML =
