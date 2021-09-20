@@ -1,0 +1,20 @@
+{
+"name": "wit-app",
+  "version": "0.0.1",
+  "description": "Record audio from browser and talk to Wit.ai",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express":"^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "multer": "^1.4.3",
+    "axios":"0.21.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  
+  "license": "MIT"
+}

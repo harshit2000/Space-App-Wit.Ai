@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>SpaceEx App</title>
+    <link rel="stylesheet" type="text/css" href = "main.css">
+    <script>
+        var stashedAudio;
+      </script>
+      <!-- import the webpage's javascript file -->
+      <!-- Excellent audio recording library:  https://github.com/mattdiamond/Recorderjs -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="/audio.js" defer></script>
+    <script src="/network.js" defer></script>
+
+</head>
+<body>
+    <header id='header'>
+        <a href="#" class = "logo">SpaceEx</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Space App</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text">
+            <span>It's time for a</span>
+            <br>
+            Space Exploration
+        </h2>
+        <img src ="/assets/mars.png" id = "mars">
+        <img src = "/assets/bt.png" id = "planet">
+        <img src = "/assets/rocket.png" id = "rocket">
+        <a href="#space_app" id="btn">Explore</a>
+    </section>
+
+    
+    <div class = "sec" id ="space_app">
+        <h1>Space App using Wit.ai</h1>
+        <br>
+        <p>The app let's you talk with space!</p>
+        <br>
+        <h2>
+            T-10 : Launch your curiosity
+          </h2>
+          <p>
+            <button id="record" disabled>Start</button>
+            <button id="stop" disabled>Stop</button>
+          </p>
+          <h2>
+            T-5 : Verify your voice
+          </h2>
+          <p>
+            <audio id="audio"/>
+          </p>
+          <p>
+            <a id="download"></a>
+          </p>
+          <h2>
+            T-0: Let the Magic Happen!
+          </h2>
+          <p>
+            <button id="send" disabled>LAUNCH</button>
+          </p>
+          
+          <p id="response">
+          </p>
+
+
+    <script>
+        let text = document.getElementById('text');
+        let mars = document.getElementById('mars');
+        let planet = document.getElementById('planet');
+        let btn = document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top =  50 + value * -0.5 + '%';
+            /*mars.style.top = value * -1.5 + 'px';*/
+            /*planet.style.top = value * -1.5 + 'px';*/
+            rocket.style.top = value * -5 + 'px';
+            /*btn.style.marginTop = value * 2.5 + 'px';*/
+            header.style.top = value * -0.5 +'px';
+
+        })
+    </script>
+
+</body>
+</html>
